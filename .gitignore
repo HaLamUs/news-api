@@ -1,0 +1,28 @@
+## Build generated
+news_api_test/build/
+news_api_test/DerivedData
+news_api_test/build.xcarchive
+
+## Various settings
+news_api_test/*.pbxuser
+news_api_test/!default.pbxuser
+news_api_test/*.mode1v3
+news_api_test/!default.mode1v3
+news_api_test/*.mode2v3
+news_api_test/!default.mode2v3
+news_api_test/*.perspectivev3
+news_api_test/!default.perspectivev3
+news_api_test/xcuserdata
+
+## Other
+news_api_test/*.xccheckout
+news_api_test/*.moved-aside
+news_api_test/*.xcuserstate
+news_api_test/*.xcscmblueprint
+
+## Obj-C/Swift specific
+news_api_test/*.hmap
+news_api_test/*.ipa
+
+news_api_test.xcodeproj/project.xcworkspace/
+news_api_test.xcodeproj/xcuserdata/
