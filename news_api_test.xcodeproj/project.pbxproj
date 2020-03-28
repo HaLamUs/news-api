@@ -18,6 +18,10 @@
 		B84117D5242DDC180030E246 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84117D4242DDC180030E246 /* ProfileViewController.swift */; };
 		B84117D7242DDDE90030E246 /* LHCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84117D6242DDDE90030E246 /* LHCustomTextField.swift */; };
 		B84117D9242DDE2F0030E246 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84117D8242DDE2F0030E246 /* Utils.swift */; };
+		B8B0A2A6242F358F00EC7C8E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2A5242F358F00EC7C8E /* Profile.swift */; };
+		B8B0A2A8242F35EE00EC7C8E /* ProfileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2A7242F35EE00EC7C8E /* ProfileError.swift */; };
+		B8B0A2AA242F368900EC7C8E /* ProfileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2A9242F368900EC7C8E /* ProfileStorage.swift */; };
+		B8B0A2AD242F372E00EC7C8E /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2AC242F372E00EC7C8E /* ProfilePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		B84117D4242DDC180030E246 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B84117D6242DDDE90030E246 /* LHCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHCustomTextField.swift; sourceTree = "<group>"; };
 		B84117D8242DDE2F0030E246 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B8B0A2A5242F358F00EC7C8E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		B8B0A2A7242F35EE00EC7C8E /* ProfileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileError.swift; sourceTree = "<group>"; };
+		B8B0A2A9242F368900EC7C8E /* ProfileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStorage.swift; sourceTree = "<group>"; };
+		B8B0A2AC242F372E00EC7C8E /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +79,7 @@
 				B84117D8242DDE2F0030E246 /* Utils.swift */,
 				B84117D0242DDBE40030E246 /* HeadlineViewController.swift */,
 				B84117D2242DDC080030E246 /* NewsViewController.swift */,
-				B84117D4242DDC180030E246 /* ProfileViewController.swift */,
+				B8B0A2AB242F369100EC7C8E /* ProfileMVP */,
 				B84117BE242DD0420030E246 /* SceneDelegate.swift */,
 				B84117C0242DD0420030E246 /* ViewController.swift */,
 				B84117C2242DD0420030E246 /* Main.storyboard */,
@@ -80,6 +88,18 @@
 				B84117CA242DD0440030E246 /* Info.plist */,
 			);
 			path = news_api_test;
+			sourceTree = "<group>";
+		};
+		B8B0A2AB242F369100EC7C8E /* ProfileMVP */ = {
+			isa = PBXGroup;
+			children = (
+				B84117D4242DDC180030E246 /* ProfileViewController.swift */,
+				B8B0A2AC242F372E00EC7C8E /* ProfilePresenter.swift */,
+				B8B0A2A5242F358F00EC7C8E /* Profile.swift */,
+				B8B0A2A7242F35EE00EC7C8E /* ProfileError.swift */,
+				B8B0A2A9242F368900EC7C8E /* ProfileStorage.swift */,
+			);
+			path = ProfileMVP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,12 +174,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84117D5242DDC180030E246 /* ProfileViewController.swift in Sources */,
+				B8B0A2AA242F368900EC7C8E /* ProfileStorage.swift in Sources */,
+				B8B0A2AD242F372E00EC7C8E /* ProfilePresenter.swift in Sources */,
 				B84117D7242DDDE90030E246 /* LHCustomTextField.swift in Sources */,
 				B84117D1242DDBE40030E246 /* HeadlineViewController.swift in Sources */,
 				B84117C1242DD0420030E246 /* ViewController.swift in Sources */,
 				B84117BD242DD0420030E246 /* AppDelegate.swift in Sources */,
 				B84117D3242DDC080030E246 /* NewsViewController.swift in Sources */,
+				B8B0A2A8242F35EE00EC7C8E /* ProfileError.swift in Sources */,
 				B84117BF242DD0420030E246 /* SceneDelegate.swift in Sources */,
+				B8B0A2A6242F358F00EC7C8E /* Profile.swift in Sources */,
 				B84117D9242DDE2F0030E246 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

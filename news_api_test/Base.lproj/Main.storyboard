@@ -137,6 +137,9 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 </variation>
+                                <connections>
+                                    <action selector="signupButtonClicked:" destination="tOn-kE-B5B" eventType="touchUpInside" id="FhC-QS-Bob"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
