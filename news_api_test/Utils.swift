@@ -43,6 +43,38 @@ struct Utils {
         textField.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                              attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
     }
+    
+    static func setupTextField(imageName: String, textField: UITextField, placeholder: String, placeholderColor: UIColor, backgroundColor: UIColor) {
+        let imageView = UIImageView(frame: isIPad()
+            ? CGRect(x: 10, y: 5, width: 30, height: 30)
+            : CGRect(x: 10, y: 5, width: 20, height: 20))
+        
+        let image = UIImage(named: imageName)
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        
+        let iconContainerView = UIView(frame: isIPad()
+            ? CGRect(x: 20, y: 0, width: 40, height: 40)
+            : CGRect(x: 20, y: 0, width: 26, height: 30))
+        iconContainerView.addSubview(imageView)
+        
+        textField.leftViewMode = .always
+        textField.leftView = iconContainerView
+        textField.backgroundColor = backgroundColor
+        textField.attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
+    }
+}
+
+struct ColorCodes {
+    static let LH_BLUE = "19B5FE"
+    static let LH_LIGHT_BLUE = "65C1E9"
+    static let LH_DARK_BLUE = "1D304C"
+    static let LH_GREY = "D9D9D6"
+    static let LH_ORANGE = "FF9900"
+    static let LH_GREEN = "C4D600"
+    static let LH_YELLOW = "F1E219"
+    static let LH_PINK = "EC008C"
 }
 
 extension UIView {
@@ -50,6 +82,13 @@ extension UIView {
     func roundCorners(radius: CGFloat = Utils.isIPad() ? 20 : 17) {
         layer.cornerRadius = radius
         layer.masksToBounds = true
+    }
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat = Utils.isIPad() ? 20 : 17) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
     }
 }
 
