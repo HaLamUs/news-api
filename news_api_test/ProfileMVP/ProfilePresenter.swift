@@ -10,13 +10,16 @@ import Foundation
 
 class ProfilePresenter {
     
+    //MARK: Properties
+    
     var profile: Profile?
+    var profileProtocol: ProfileProtocol!
     
-    weak var profileViewController: ProfileViewController!
+    //MARK: Functions
     
-    init(profile: Profile?, viewController: ProfileViewController) {
+    init(profile: Profile?, profileProtocol: ProfileProtocol) {
         self.profile = profile
-        self.profileViewController = viewController
+        self.profileProtocol = profileProtocol
         
         if let profile  = self.profile {
             self.setProfile(profile)
@@ -25,10 +28,10 @@ class ProfilePresenter {
     }
     
     func setProfile(_ profile: Profile) {
-        self.profileViewController.setName(profile.name)
-        self.profileViewController.setPhoneNumber(profile.phoneNumber)
-        self.profileViewController.setEmail(profile.email)
-        self.profileViewController.setPassword(profile.password)
+        self.profileProtocol.setName(profile.name)
+        self.profileProtocol.setPhoneNumber(profile.phoneNumber)
+        self.profileProtocol.setEmail(profile.email)
+        self.profileProtocol.setPassword(profile.password)
     }
     
     func validateInput(name: String, phoneNumber: String, email: String,
@@ -58,19 +61,19 @@ class ProfilePresenter {
     }
     
     func signupButtonPressed() {
-        if let error = self.validateInput(name: profileViewController.getName(),
-                                          phoneNumber: profileViewController.getPhoneNumber(),
-                                          email: profileViewController.getEmail(),
-                                          password: profileViewController.getPassword()) {
+        if let error = self.validateInput(name: profileProtocol.getName(),
+                                          phoneNumber: profileProtocol.getPhoneNumber(),
+                                          email: profileProtocol.getEmail(),
+                                          password: profileProtocol.getPassword()) {
             
-            self.profileViewController.showAlert(title: "Error", message: error.localizedDescription)
+            self.profileProtocol.showAlert(title: "Error", message: error.localizedDescription)
         } else {
-            self.saveProfileData(name: profileViewController.getName(),
-                                 phoneNumber: profileViewController.getPhoneNumber(),
-                                 email: profileViewController.getEmail(),
-                                 password: profileViewController.getPassword() )
+            self.saveProfileData(name: profileProtocol.getName(),
+                                 phoneNumber: profileProtocol.getPhoneNumber(),
+                                 email: profileProtocol.getEmail(),
+                                 password: profileProtocol.getPassword() )
             
-            self.profileViewController.showAlert(title: "Success", message: "The profile updated successfully")
+            self.profileProtocol.showAlert(title: "Success", message: "The profile updated successfully")
         }
     }
     

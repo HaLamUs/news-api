@@ -19,13 +19,20 @@ class ProfileStorage {
     }
     
     func saveProfile() {
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(profile), forKey: keyProfile)
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(profile) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: keyProfile)
+        }
     }
     
     func getProfile() -> Profile? {
-        if let profileData = UserDefaults.standard.value(forKey: keyProfile) as? Data {
-            let profile = try? PropertyListDecoder().decode(Profile.self, from: profileData)
-            return profile
+        let defaults = UserDefaults.standard
+        if let profileData = defaults.object(forKey: keyProfile) as? Data {
+            let decoder = JSONDecoder()
+            if let profile = try? decoder.decode(Profile.self, from: profileData) {
+                return profile
+            }
         }
         return nil
     }

@@ -35,6 +35,30 @@ class ProfileViewController: UIViewController {
         loadData()
     }
     
+}
+
+// MARK: Logic
+extension ProfileViewController {
+    
+    func loadData() {
+        let profile = ProfileStorage.default.profile
+        profilePresenter = ProfilePresenter(profile: profile, profileProtocol: self)
+    }
+    
+    func setupUI() {
+        nameTextField.roundCorners(corners: [.topLeft, .topRight], radius: Utils.isIPad() ? 20 : 17)
+        passwordTextField.roundCorners(corners: [.bottomLeft, .bottomRight], radius: Utils.isIPad() ? 20 : 17)
+        
+        Utils.setupTextField(imageName: "", textField: nameTextField, placeholder: "Name", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
+        Utils.setupTextField(imageName: "", textField: emailTextField, placeholder: "Email", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
+        Utils.setupTextField(imageName: "", textField: passwordTextField, placeholder: "Password", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
+        Utils.setupTextField(imageName: "", textField: phoneTextField, placeholder: "Phone number", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
+    }
+    
+    
+}
+
+extension ProfileViewController: ProfileProtocol {
     // MARK: Setters
     
     func setName(_ name: String) {
@@ -71,25 +95,7 @@ class ProfileViewController: UIViewController {
         return passwordTextField.text ?? ""
     }
     
-}
-
-// MARK: Logic
-extension ProfileViewController {
-    
-    func loadData() {
-        let profile = ProfileStorage.default.profile
-        profilePresenter = ProfilePresenter(profile: profile, viewController: self)
-    }
-    
-    func setupUI() {
-        nameTextField.roundCorners(corners: [.topLeft, .topRight], radius: Utils.isIPad() ? 20 : 17)
-        passwordTextField.roundCorners(corners: [.bottomLeft, .bottomRight], radius: Utils.isIPad() ? 20 : 17)
-        
-        Utils.setupTextField(imageName: "", textField: nameTextField, placeholder: "Name", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
-        Utils.setupTextField(imageName: "", textField: emailTextField, placeholder: "Email", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
-        Utils.setupTextField(imageName: "", textField: passwordTextField, placeholder: "Password", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
-        Utils.setupTextField(imageName: "", textField: phoneTextField, placeholder: "Phone number", placeholderColor: UIColor.init(hexString: ColorCodes.LH_LIGHT_BLUE), backgroundColor: UIColor.white)
-    }
+    // MARK: Logic
     
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

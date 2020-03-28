@@ -22,6 +22,7 @@
 		B8B0A2A8242F35EE00EC7C8E /* ProfileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2A7242F35EE00EC7C8E /* ProfileError.swift */; };
 		B8B0A2AA242F368900EC7C8E /* ProfileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2A9242F368900EC7C8E /* ProfileStorage.swift */; };
 		B8B0A2AD242F372E00EC7C8E /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2AC242F372E00EC7C8E /* ProfilePresenter.swift */; };
+		B8B0A2AF242F48EA00EC7C8E /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B0A2AE242F48EA00EC7C8E /* ProfileProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B8B0A2A7242F35EE00EC7C8E /* ProfileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileError.swift; sourceTree = "<group>"; };
 		B8B0A2A9242F368900EC7C8E /* ProfileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStorage.swift; sourceTree = "<group>"; };
 		B8B0A2AC242F372E00EC7C8E /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		B8B0A2AE242F48EA00EC7C8E /* ProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				B84117D4242DDC180030E246 /* ProfileViewController.swift */,
 				B8B0A2AC242F372E00EC7C8E /* ProfilePresenter.swift */,
+				B8B0A2AE242F48EA00EC7C8E /* ProfileProtocol.swift */,
 				B8B0A2A5242F358F00EC7C8E /* Profile.swift */,
 				B8B0A2A7242F35EE00EC7C8E /* ProfileError.swift */,
 				B8B0A2A9242F368900EC7C8E /* ProfileStorage.swift */,
@@ -185,6 +188,7 @@
 				B84117BF242DD0420030E246 /* SceneDelegate.swift in Sources */,
 				B8B0A2A6242F358F00EC7C8E /* Profile.swift in Sources */,
 				B84117D9242DDE2F0030E246 /* Utils.swift in Sources */,
+				B8B0A2AF242F48EA00EC7C8E /* ProfileProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
