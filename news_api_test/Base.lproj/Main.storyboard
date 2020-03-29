@@ -96,6 +96,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="OE5-A8-jDD">
+                                <rect key="frame" x="197" y="471" width="20" height="20"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -103,14 +107,16 @@
                             <constraint firstItem="jN0-VD-yaP" firstAttribute="leading" secondItem="uA1-tK-Tci" secondAttribute="leading" id="7hZ-fI-OUj"/>
                             <constraint firstItem="uA1-tK-Tci" firstAttribute="trailing" secondItem="jN0-VD-yaP" secondAttribute="trailing" id="EKD-rz-l2Y"/>
                             <constraint firstItem="MJu-Ta-BU8" firstAttribute="top" secondItem="uA1-tK-Tci" secondAttribute="top" constant="8" id="GPI-gZ-MbT"/>
+                            <constraint firstItem="OE5-A8-jDD" firstAttribute="centerY" secondItem="jN0-VD-yaP" secondAttribute="centerY" id="RNC-4o-rqI"/>
+                            <constraint firstItem="OE5-A8-jDD" firstAttribute="centerX" secondItem="jN0-VD-yaP" secondAttribute="centerX" id="Z4m-0q-aNS"/>
                             <constraint firstItem="MJu-Ta-BU8" firstAttribute="leading" secondItem="uA1-tK-Tci" secondAttribute="leading" constant="8" id="ccc-LE-0iU"/>
                             <constraint firstItem="uA1-tK-Tci" firstAttribute="bottom" secondItem="jN0-VD-yaP" secondAttribute="bottom" id="mYo-2I-xCv"/>
                             <constraint firstItem="uA1-tK-Tci" firstAttribute="trailing" secondItem="MJu-Ta-BU8" secondAttribute="trailing" constant="8" id="muJ-FE-Oyu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uA1-tK-Tci"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kJk-mp-peN"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="OE5-A8-jDD" id="Bzy-p2-Od9"/>
                         <outlet property="webView" destination="jN0-VD-yaP" id="4At-xd-9VI"/>
                     </connections>
                 </viewController>

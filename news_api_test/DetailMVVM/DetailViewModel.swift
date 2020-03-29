@@ -12,8 +12,14 @@ import RxSwift
 class DetailViewModel {
     
     public let headline: PublishSubject<Headline> = PublishSubject()
+    public var isLoading = PublishSubject<Bool>()
     
     public func openUrl(from headline: Headline) {
+        isLoading.onNext(true)
         self.headline.onNext(headline)
+    }
+    
+    func showWebviewStatus(isFinish: Bool) {
+        isLoading.onNext(isFinish)
     }
 }
