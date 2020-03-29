@@ -45,18 +45,18 @@ struct Utils {
     }
     
     static func setupTextField(imageName: String, textField: UITextField, placeholder: String, placeholderColor: UIColor, backgroundColor: UIColor) {
-        let imageView = UIImageView(frame: isIPad()
-            ? CGRect(x: 10, y: 5, width: 30, height: 30)
-            : CGRect(x: 10, y: 5, width: 20, height: 20))
+//        let imageView = UIImageView(frame: isIPad()
+//            ? CGRect(x: 10, y: 5, width: 30, height: 30)
+//            : CGRect(x: 10, y: 5, width: 20, height: 20))
         
-        let image = UIImage(named: imageName)
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = image
+//        let image = UIImage(named: imageName)
+//        imageView.contentMode = .scaleAspectFit
+//        imageView.image = image
         
         let iconContainerView = UIView(frame: isIPad()
             ? CGRect(x: 20, y: 0, width: 40, height: 40)
             : CGRect(x: 20, y: 0, width: 26, height: 30))
-        iconContainerView.addSubview(imageView)
+//        iconContainerView.addSubview(imageView)
         
         textField.leftViewMode = .always
         textField.leftView = iconContainerView

@@ -8,5 +8,7 @@ target 'news_api_test' do
   # Pods for news_api_test
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
 end

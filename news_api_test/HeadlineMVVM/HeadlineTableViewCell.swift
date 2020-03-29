@@ -12,4 +12,11 @@ class HeadlineTableViewCell: UITableViewCell {
     
     @IBOutlet weak var headlineImageView: UIImageView!
     @IBOutlet weak var headLineContentLabel: UILabel!
+    
+    public var headline : Headline! {
+        didSet {
+            headLineContentLabel.text = headline.title
+            headlineImageView.loadImage(fromURL: headline.urlToImage)
+        }
+    }
 }
