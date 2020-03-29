@@ -15,6 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxN-9c-PL7">
+                                <rect key="frame" x="8" y="52" width="398" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                </variation>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Centre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6A-UH-Em7" customClass="LHCustomTextField" customModule="news_api_test" customModuleProvider="target">
                                 <rect key="frame" x="30" y="91.5" width="354" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,23 +42,28 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxN-9c-PL7">
-                                <rect key="frame" x="8" y="52" width="398" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                </variation>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DmW-5E-osE">
+                                <rect key="frame" x="0.0" y="155.5" width="414" height="657.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yA9-Bd-ywL">
+                                <rect key="frame" x="197" y="474.5" width="20" height="20"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yA9-Bd-ywL" firstAttribute="centerY" secondItem="DmW-5E-osE" secondAttribute="centerY" id="8AW-Co-NkO"/>
+                            <constraint firstItem="DmW-5E-osE" firstAttribute="top" secondItem="d6A-UH-Em7" secondAttribute="bottom" constant="16" id="JI0-n7-vQa"/>
+                            <constraint firstItem="DmW-5E-osE" firstAttribute="leading" secondItem="laj-Ca-Hb1" secondAttribute="leading" id="LwQ-xV-aus"/>
                             <constraint firstItem="d6A-UH-Em7" firstAttribute="leading" secondItem="laj-Ca-Hb1" secondAttribute="leading" constant="30" id="Trn-Z3-tAs">
                                 <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                             </constraint>
                             <constraint firstItem="hxN-9c-PL7" firstAttribute="top" secondItem="laj-Ca-Hb1" secondAttribute="top" constant="8" id="UBq-cf-4cZ"/>
                             <constraint firstItem="laj-Ca-Hb1" firstAttribute="trailing" secondItem="hxN-9c-PL7" secondAttribute="trailing" constant="8" id="Y4M-6v-kLb"/>
+                            <constraint firstItem="laj-Ca-Hb1" firstAttribute="trailing" secondItem="DmW-5E-osE" secondAttribute="trailing" id="bqL-OE-h2H"/>
+                            <constraint firstItem="laj-Ca-Hb1" firstAttribute="bottom" secondItem="DmW-5E-osE" secondAttribute="bottom" id="c81-e0-s8R"/>
+                            <constraint firstItem="yA9-Bd-ywL" firstAttribute="centerX" secondItem="DmW-5E-osE" secondAttribute="centerX" id="ePa-Xj-vM5"/>
                             <constraint firstItem="d6A-UH-Em7" firstAttribute="centerX" secondItem="4Ys-M1-Hmx" secondAttribute="centerX" id="kh2-4g-3XV"/>
                             <constraint firstItem="hxN-9c-PL7" firstAttribute="leading" secondItem="4Ys-M1-Hmx" secondAttribute="leading" constant="8" id="lNv-vn-gur"/>
                             <constraint firstItem="d6A-UH-Em7" firstAttribute="top" secondItem="hxN-9c-PL7" secondAttribute="bottom" constant="8" id="swF-Qj-kpV"/>
@@ -59,6 +73,8 @@
                     <tabBarItem key="tabBarItem" title="Custom News" image="news" id="HVk-bB-eCr"/>
                     <connections>
                         <outlet property="keywordDropdown" destination="d6A-UH-Em7" id="FO0-kZ-jG2"/>
+                        <outlet property="loadingIndicator" destination="yA9-Bd-ywL" id="QIp-fB-0Rf"/>
+                        <outlet property="newsTableView" destination="DmW-5E-osE" id="Ibx-Oa-ung"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1f-9X-fHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,7 +190,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" red="0.098039215686274508" green="0.70980392156862748" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         </variation>
@@ -255,7 +271,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch9-VG-sd8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch9-VG-sd8">
                                 <rect key="frame" x="8" y="52" width="398" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>

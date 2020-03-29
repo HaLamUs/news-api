@@ -15,6 +15,8 @@ class HeadlineTableViewCell: UITableViewCell {
     
     public var headline : Headline! {
         didSet {
+            headlineImageView.image = nil
+            headLineContentLabel.text = ""
             headLineContentLabel.text = headline.title
             headlineImageView.loadImage(fromURL: headline.urlToImage)
         }

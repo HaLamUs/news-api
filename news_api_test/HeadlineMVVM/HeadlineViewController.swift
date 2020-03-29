@@ -77,6 +77,9 @@ class HeadlineViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
+        headlineTableView.rx.setDelegate(self)
+        .disposed(by: disposeBag)
+        
         headlineTableView.rx.itemSelected
             .subscribe(
                 onNext: {
@@ -106,6 +109,12 @@ extension HeadlineViewController {
             detailViewController.setupBindings()
             detailViewController.detailViewModel.openUrl(from: headline)
         }
+    }
+}
+
+extension HeadlineViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Utils.isIPad() ? 100 : 80
     }
 }
 

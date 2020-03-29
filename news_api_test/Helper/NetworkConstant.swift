@@ -10,7 +10,7 @@ import Foundation
 
 struct NetworkConstant {
     
-    static let baseUrl = "https://newsapi.org/v2/top-headlines"
+    static let baseUrl = "https://newsapi.org/v2/"
 }
 
 public enum NetworkError {
