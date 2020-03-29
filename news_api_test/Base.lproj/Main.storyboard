@@ -65,6 +65,59 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="355.58035714285711"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="ffL-vf-YQM">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="cBf-VS-lYY" customClass="DetailViewController" customModule="news_api_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57E-go-6rw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJu-Ta-BU8">
+                                <rect key="frame" x="8" y="52" width="398" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="A0F-Ob-toc">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="cBf-VS-lYY" eventType="touchUpInside" id="zQP-ak-7QN"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jN0-VD-yaP">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jN0-VD-yaP" firstAttribute="top" secondItem="MJu-Ta-BU8" secondAttribute="bottom" constant="8" id="3oC-H4-2xu"/>
+                            <constraint firstItem="jN0-VD-yaP" firstAttribute="leading" secondItem="uA1-tK-Tci" secondAttribute="leading" id="7hZ-fI-OUj"/>
+                            <constraint firstItem="uA1-tK-Tci" firstAttribute="trailing" secondItem="jN0-VD-yaP" secondAttribute="trailing" id="EKD-rz-l2Y"/>
+                            <constraint firstItem="MJu-Ta-BU8" firstAttribute="top" secondItem="uA1-tK-Tci" secondAttribute="top" constant="8" id="GPI-gZ-MbT"/>
+                            <constraint firstItem="MJu-Ta-BU8" firstAttribute="leading" secondItem="uA1-tK-Tci" secondAttribute="leading" constant="8" id="ccc-LE-0iU"/>
+                            <constraint firstItem="uA1-tK-Tci" firstAttribute="bottom" secondItem="jN0-VD-yaP" secondAttribute="bottom" id="mYo-2I-xCv"/>
+                            <constraint firstItem="uA1-tK-Tci" firstAttribute="trailing" secondItem="MJu-Ta-BU8" secondAttribute="trailing" constant="8" id="muJ-FE-Oyu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uA1-tK-Tci"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kJk-mp-peN"/>
+                    <connections>
+                        <outlet property="webView" destination="jN0-VD-yaP" id="4At-xd-9VI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXs-lQ-klJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.36231884058" y="253.79464285714283"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="oWc-7v-fZh">
             <objects>

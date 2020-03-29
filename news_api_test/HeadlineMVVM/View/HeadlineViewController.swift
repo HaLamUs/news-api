@@ -34,11 +34,11 @@ class HeadlineViewController: UIViewController {
     
     // MARK: Bindings
     
-    private func setupBindings() {
+    func setupBindings() {
         
-        //binding view model
+        //binding error
         headlineViewModel
-            .error
+            .error // error variable
             .observeOn(MainScheduler.instance)
             .subscribe(onNext:
                 {
@@ -77,6 +77,20 @@ class HeadlineViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
+        headlineTableView.rx.itemSelected
+            .subscribe(
+                onNext: {
+                    indexPath in
+                    let cell = self.headlineTableView.cellForRow(at: indexPath) as? HeadlineTableViewCell
+                    guard let headline = cell?.headline else { return }
+                    self.showDetailView(headline)
+            },
+                onError: {
+                    error in
+                    self.showAlert(title: "Error", message: "Wrong cell at index")
+            }
+        ).disposed(by: disposeBag)
+        
     }
     
 }
@@ -84,10 +98,14 @@ class HeadlineViewController: UIViewController {
 //MARK: Logic
 extension HeadlineViewController {
     
-    func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+    func showDetailView(_ headline: Headline) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        detailViewController.modalPresentationStyle = .fullScreen
+        present(detailViewController, animated: false) {
+            detailViewController.setupBindings()
+            detailViewController.detailViewModel.openUrl(from: headline)
+        }
     }
 }
 

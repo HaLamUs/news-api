@@ -13,9 +13,9 @@ import SwiftyJSON
 
 class HeadlineViewModel {
     
-    public let headlines : PublishSubject<[Headline]> = PublishSubject()
+    public let headlines: PublishSubject<[Headline]> = PublishSubject()
     public let isLoading: PublishSubject<Bool> = PublishSubject()
-    public let error : PublishSubject<NetworkError> = PublishSubject()
+    public let error: PublishSubject<NetworkError> = PublishSubject()
     
     public func fetchHeadlines() {
         isLoading.onNext(true)
