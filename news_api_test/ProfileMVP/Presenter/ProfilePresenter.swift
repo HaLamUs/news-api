@@ -13,11 +13,11 @@ class ProfilePresenter {
     //MARK: Properties
     
     var profile: Profile?
-    var profileProtocol: ProfileProtocol!
+    var profileProtocol: ProfileProtocol?
     
     //MARK: Functions
     
-    init(profile: Profile?, profileProtocol: ProfileProtocol) {
+    init(profile: Profile?, profileProtocol: ProfileProtocol?) {
         self.profile = profile
         self.profileProtocol = profileProtocol
         
@@ -28,10 +28,11 @@ class ProfilePresenter {
     }
     
     func setProfile(_ profile: Profile) {
-        self.profileProtocol.setName(profile.name)
-        self.profileProtocol.setPhoneNumber(profile.phoneNumber)
-        self.profileProtocol.setEmail(profile.email)
-        self.profileProtocol.setPassword(profile.password)
+        guard let profileProtocol = profileProtocol else {return}
+        profileProtocol.setName(profile.name)
+        profileProtocol.setPhoneNumber(profile.phoneNumber)
+        profileProtocol.setEmail(profile.email)
+        profileProtocol.setPassword(profile.password)
     }
     
     func validateInput(name: String, phoneNumber: String, email: String,
@@ -61,19 +62,20 @@ class ProfilePresenter {
     }
     
     func signupButtonPressed() {
+        guard let profileProtocol = profileProtocol else {return}
         if let error = self.validateInput(name: profileProtocol.getName(),
                                           phoneNumber: profileProtocol.getPhoneNumber(),
                                           email: profileProtocol.getEmail(),
                                           password: profileProtocol.getPassword()) {
             
-            self.profileProtocol.showAlert(title: "Error", message: error.localizedDescription)
+            profileProtocol.showAlert(title: "Error", message: error.localizedDescription)
         } else {
             self.saveProfileData(name: profileProtocol.getName(),
                                  phoneNumber: profileProtocol.getPhoneNumber(),
                                  email: profileProtocol.getEmail(),
                                  password: profileProtocol.getPassword() )
             
-            self.profileProtocol.showAlert(title: "Success", message: "The profile updated successfully")
+            profileProtocol.showAlert(title: "Success", message: "The profile updated successfully")
         }
     }
     
