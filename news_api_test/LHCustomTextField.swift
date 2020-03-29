@@ -51,7 +51,7 @@ class LHCustomTextField: UITextField {
         let height = self.bounds.size.height - 2 * topMargin
         let paddingView = UIView(frame: CGRect(x: 0, y: topMargin, width: width, height: height))
         
-        let fontSize: CGFloat = Utils.isIPad() ? 18.0 : 12.0
+        let fontSize: CGFloat = Utils.isIPad() ? 18.0 : 16.0
         let leftLabelRect = CGRect(x: leftMargin, y: 0, width: width, height: height)
         leftLabel = UILabel(frame: leftLabelRect)
         leftLabel.font = UIFont.systemFont(ofSize: fontSize)

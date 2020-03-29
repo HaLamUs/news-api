@@ -23,7 +23,7 @@ struct Utils {
     static func setupDropDown(imageName: String, textField: UITextField, placeholder: String, placeholderColor: UIColor) {
         let imageView = UIImageView(frame: isIPad()
             ? CGRect(x: 0, y: 0, width: 20, height: 20)
-            : CGRect(x: 0, y: 0, width: 15, height: 15))
+            : CGRect(x: 0, y: 0, width: 20, height: 20))
         
         let image = UIImage(named: imageName)
         imageView.image = image
@@ -32,7 +32,7 @@ struct Utils {
         
         let iconContainerView = UIView(frame: isIPad()
             ? CGRect(x: 0, y: 0, width: 40, height: 20)
-            : CGRect(x: 0, y: 0, width: 30, height: 15))
+            : CGRect(x: 0, y: 0, width: 40, height: 20))
         iconContainerView.addSubview(imageView)
         iconContainerView.isUserInteractionEnabled = false
         

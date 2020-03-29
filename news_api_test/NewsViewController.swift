@@ -25,6 +25,8 @@ class NewsViewController: UIViewController {
         setupKeywordPickers()
         keywordDropdown.roundCorners()
         Utils.setupDropDowns(views: [keywordDropdown], imageName: "arrow_down_blue_icon", placeholder: ["Keyword"], placeholderColor: .lightGray)
+        keywordDropdown.layer.borderWidth = 1
+        keywordDropdown.layer.borderColor = UIColor(hexString: ColorCodes.LH_BLUE).cgColor
     }
     
     func setupKeywordPickers() {

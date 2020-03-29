@@ -151,13 +151,37 @@
 		B868E0AB24304879004D47BE /* HeadlineMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				B868E0B824306AD3004D47BE /* View */,
+				B868E0BA24306AEC004D47BE /* ViewModel */,
+				B868E0B924306ADA004D47BE /* Model */,
+			);
+			path = HeadlineMVVM;
+			sourceTree = "<group>";
+		};
+		B868E0B824306AD3004D47BE /* View */ = {
+			isa = PBXGroup;
+			children = (
 				B84117D0242DDBE40030E246 /* HeadlineViewController.swift */,
-				B868E0AC243048A7004D47BE /* HeadlineViewModel.swift */,
-				B868E0AE24304B5E004D47BE /* Headline.swift */,
 				B868E0A6243045D9004D47BE /* HeadlineTableViewCell.swift */,
 				B868E0B424305752004D47BE /* HeadlineTableViewCell.xib */,
 			);
-			path = HeadlineMVVM;
+			path = View;
+			sourceTree = "<group>";
+		};
+		B868E0B924306ADA004D47BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B868E0AE24304B5E004D47BE /* Headline.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B868E0BA24306AEC004D47BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B868E0AC243048A7004D47BE /* HeadlineViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B8B0A2AB242F369100EC7C8E /* ProfileMVP */ = {

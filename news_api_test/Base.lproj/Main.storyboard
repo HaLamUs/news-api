@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Centre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6A-UH-Em7" customClass="LHCustomTextField" customModule="news_api_test" customModuleProvider="target">
-                                <rect key="frame" x="30" y="62" width="354" height="48"/>
+                                <rect key="frame" x="30" y="91.5" width="354" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="EuH-mB-Ezj">
                                         <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                                     </constraint>
                                 </constraints>
-                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -33,14 +33,26 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxN-9c-PL7">
+                                <rect key="frame" x="8" y="52" width="398" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="d6A-UH-Em7" firstAttribute="top" secondItem="laj-Ca-Hb1" secondAttribute="top" constant="18" id="F5K-OV-JBk"/>
                             <constraint firstItem="d6A-UH-Em7" firstAttribute="leading" secondItem="laj-Ca-Hb1" secondAttribute="leading" constant="30" id="Trn-Z3-tAs">
                                 <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                             </constraint>
+                            <constraint firstItem="hxN-9c-PL7" firstAttribute="top" secondItem="laj-Ca-Hb1" secondAttribute="top" constant="8" id="UBq-cf-4cZ"/>
+                            <constraint firstItem="laj-Ca-Hb1" firstAttribute="trailing" secondItem="hxN-9c-PL7" secondAttribute="trailing" constant="8" id="Y4M-6v-kLb"/>
                             <constraint firstItem="d6A-UH-Em7" firstAttribute="centerX" secondItem="4Ys-M1-Hmx" secondAttribute="centerX" id="kh2-4g-3XV"/>
+                            <constraint firstItem="hxN-9c-PL7" firstAttribute="leading" secondItem="4Ys-M1-Hmx" secondAttribute="leading" constant="8" id="lNv-vn-gur"/>
+                            <constraint firstItem="d6A-UH-Em7" firstAttribute="top" secondItem="hxN-9c-PL7" secondAttribute="bottom" constant="8" id="swF-Qj-kpV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="laj-Ca-Hb1"/>
                     </view>
@@ -62,16 +74,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCO-nN-BJF">
-                                <rect key="frame" x="128" y="124" width="158.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="112.5" y="124" width="189" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-Ie-kp4" userLabel="Text Field Stack View">
-                                <rect key="frame" x="40" y="228" width="334" height="195"/>
+                                <rect key="frame" x="40" y="233" width="334" height="195"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRW-3c-7eJ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="48"/>
@@ -81,8 +93,8 @@
                                                 <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                                             </constraint>
                                         </constraints>
-                                        <color key="textColor" red="0.21176470589999999" green="0.82745098039999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.098039215686274508" green="0.70980392156862748" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -91,8 +103,8 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZ5-0g-y3y">
                                         <rect key="frame" x="0.0" y="49" width="334" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="0.21176470589999999" green="0.82745098039999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -101,8 +113,8 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rX-1I-0wT">
                                         <rect key="frame" x="0.0" y="98" width="334" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="0.21176470589999999" green="0.82745098039999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.098039215686274508" green="0.70980392156862748" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -111,8 +123,8 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIU-tF-7W0">
                                         <rect key="frame" x="0.0" y="147" width="334" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="0.21176470589999999" green="0.82745098039999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.098039215686274508" green="0.70980392156862748" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -126,14 +138,17 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLr-hX-dDR">
-                                <rect key="frame" x="176" y="453" width="62" height="35"/>
+                                <rect key="frame" x="159" y="458" width="96" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="kwG-Jn-PP8">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                    <constraint firstAttribute="width" secondItem="hLr-hX-dDR" secondAttribute="height" multiplier="2:1" id="7Gl-zf-IiW"/>
+                                    <constraint firstAttribute="height" constant="48" id="kwG-Jn-PP8">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="64"/>
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Signup"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 </variation>
@@ -142,7 +157,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.9623349309" green="0.96302431820000001" blue="0.97264796499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hLr-hX-dDR" firstAttribute="top" secondItem="Uhb-Ie-kp4" secondAttribute="bottom" constant="30" id="Efe-R2-Y3O">
                                 <variation key="heightClass=regular-widthClass=regular" constant="40"/>
@@ -166,6 +181,7 @@
                         <outlet property="nameTextField" destination="hRW-3c-7eJ" id="px1-7z-JMx"/>
                         <outlet property="passwordTextField" destination="kIU-tF-7W0" id="NQj-Pe-DfV"/>
                         <outlet property="phoneTextField" destination="5rX-1I-0wT" id="OWQ-1b-4CD"/>
+                        <outlet property="signupButton" destination="hLr-hX-dDR" id="aoZ-NY-nTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCu-k7-z1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,23 +196,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch9-VG-sd8">
+                                <rect key="frame" x="8" y="52" width="398" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                </variation>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OzB-oO-uIu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="91.5" width="414" height="721.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-zm-YT5">
-                                <rect key="frame" x="188.5" y="410" width="37" height="37"/>
-                                <color key="color" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="188.5" y="434" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ch9-VG-sd8" firstAttribute="leading" secondItem="h8S-g0-aTi" secondAttribute="leading" constant="8" id="ANW-ZK-Loa"/>
                             <constraint firstItem="h8S-g0-aTi" firstAttribute="bottom" secondItem="OzB-oO-uIu" secondAttribute="bottom" id="ChQ-Eh-lCi"/>
-                            <constraint firstItem="OzB-oO-uIu" firstAttribute="top" secondItem="h8S-g0-aTi" secondAttribute="top" id="D0w-9L-uy7"/>
                             <constraint firstItem="h8S-g0-aTi" firstAttribute="trailing" secondItem="OzB-oO-uIu" secondAttribute="trailing" id="KeH-vB-oKw"/>
+                            <constraint firstItem="ch9-VG-sd8" firstAttribute="top" secondItem="h8S-g0-aTi" secondAttribute="top" constant="8" id="RJ6-FW-07t"/>
                             <constraint firstItem="OzB-oO-uIu" firstAttribute="leading" secondItem="h8S-g0-aTi" secondAttribute="leading" id="Soe-By-5SC"/>
                             <constraint firstItem="o3R-zm-YT5" firstAttribute="centerX" secondItem="OzB-oO-uIu" secondAttribute="centerX" id="Zdr-Gh-Hc3"/>
+                            <constraint firstItem="h8S-g0-aTi" firstAttribute="trailing" secondItem="ch9-VG-sd8" secondAttribute="trailing" constant="8" id="biy-uH-oby"/>
                             <constraint firstItem="o3R-zm-YT5" firstAttribute="centerY" secondItem="OzB-oO-uIu" secondAttribute="centerY" id="eQo-5Z-VQ2"/>
+                            <constraint firstItem="OzB-oO-uIu" firstAttribute="top" secondItem="ch9-VG-sd8" secondAttribute="bottom" constant="8" id="qMF-KG-o1D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h8S-g0-aTi"/>
                     </view>
@@ -219,7 +247,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.098039215690000001" green="0.70980392160000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Jrm-oz-eZO" kind="relationship" relationship="viewControllers" id="PBh-XP-XpR"/>
