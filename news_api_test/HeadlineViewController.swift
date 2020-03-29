@@ -10,6 +10,8 @@ import UIKit
 
 class HeadlineViewController: UIViewController {
     
+    @IBOutlet weak var headlineTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

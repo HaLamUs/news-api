@@ -26,3 +26,7 @@ news_api_test/*.ipa
 
 news_api_test.xcodeproj/project.xcworkspace/
 news_api_test.xcodeproj/xcuserdata/
+
+Pods/
+news_api_test.xcworkspace/xcshareddata/
+news_api_test.xcworkspace/xcuserdata/
